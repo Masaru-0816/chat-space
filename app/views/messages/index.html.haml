@@ -1,7 +1,3 @@
--# .wrapper
--#   = render "side_bar"
--#   = render "main_chat"
-
 .body
   .side_bar
     .side_bar_user-box
@@ -52,11 +48,9 @@
     .main_chat_form
       .main_chat_form-input
         .main_chat_form-input-type
-          %input.input-type{:name => "text", :placeholder => "type a message", :type => "text"}/ 
-          -# %span#id_image.class_imagebtn
-            -# %i.far.fa-image
+          %input.input-type{name:"text", placeholder:"type a message", type:"text"}/ 
           %label{class: "input-box__image"}
             %i.far.fa-image
             %input{type: "file"}
         .main_chat_form-input-send
-          %input.input-send{:name => "send", :type => "submit"}/
+          %input.input-send{name:"send", type:"submit"}/
