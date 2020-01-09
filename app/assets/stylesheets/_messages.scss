@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+
+  .side_bar {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 300px;
+    color: #fff;
+    font-weight: bold;
+    &_user-box {
+      background-color: #253141;
+      height: 100px;
+      line-height: 100px;
+      width: 100%;
+      font-size: 16px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      
+      &-icon {
+        width: 60px;
+        text-align: right;
+        i {
+          padding-left: 5px;
+          color: #fff;
+        }
+      }
+    }
+    
+    &_group {
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      width: 100%;
+      padding: 20px 20px 0px 20px;
+      &-list {
+        padding-bottom: 40px;
+        h {
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+    
+  .main_chat {
+    height: 100%;
+    width: calc(100vw - 300px);
+    padding-left: 300px;
+
+    &_group {
+      position: fixed;
+      background-color: #fff;
+      height: 100px;
+      width: calc(100vw - 300px);
+      padding: 0 40px;
+      border-bottom: solid 1px #eee;
+      display: flex;
+      justify-content: space-between;
+      &-info {
+        padding-top: 35px;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        h {
+          color: #333;
+          height: 30px;
+          line-height: 30px;
+          font-size: 20px;
+          padding-bottom: 15px;
+        }
+        p {
+          color: #999;
+          height: 20px;
+          line-height: 20px;
+          font-size: 12px;
+          position: absolute;
+          bottom: 0;
+        }
+
+      }
+      &-edit {
+        height: 100%;
+        padding-top: 28px;
+        .edit-btn {
+          text-decoration: none;
+          p {
+            height: 40px;
+            line-height: 40px;
+            width: 72px;
+            text-align: center;
+            border: solid 1px #38aef0;
+            font-size: 16px;
+            color: #38aef0;
+          }
+        }
+      }
+
+    }
+
+    &_message {
+      padding: 100px 0 90px;
+      background-color: #fafafa;
+      height: 100vh;
+      width: calc(100vw - 300px);
+      &-list {
+        padding: 35px 0px 46px 40px;
+        h1 {
+          color: #333;
+          height: 20px;
+          font-size: 16px;
+          float: left;
+          padding: 0px 5px 12px 0px;
+        }
+        h2 {
+          color: #999;
+          height: 20px;
+          font-size: 12px;
+        }
+        h3 {
+          color: #333;
+          height: 25px;
+          line-height: 25px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    &_form {
+      position: fixed;
+      background-color:#d2d2d2;
+      height: 90px;
+      width: calc(100vw - 300px);
+      position: absolute;
+      bottom: 0;
+      &-input {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        padding: 20px 40px;
+        display: flex;
+        top: 20px;
+        left: 40px;
+        &-type {
+          height: 100%;
+          line-height: 90px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          input {
+            height: 50px;
+            width: 100%;
+            padding: 0px 10px;
+            border: solid 0px;
+          }
+          label {
+            background-color: #fff;
+            color: #fff;
+            cursor: pointer;
+            padding: 15px 20px;
+            margin: 0 10px 0 0;
+            display: inline-block;
+            position: relative;
+            i {
+              height: 50px;
+              z-index: 1;
+              color: #000;
+              font-size: 25px;
+              position: absolute;
+              right: 10px;
+           }
+
+          }
+          label input {
+            display: none;
+          }
+        }
+        &-send {
+          height: 100%;
+          input {
+            background-color: #38aef0;
+            color: #fff;
+            font-weight: bold;
+            height: 50px;
+            line-height: 50px;
+            width: 100px;
+            text-align: center;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}
