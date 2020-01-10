@@ -1,0 +1,56 @@
+.body
+  .side_bar
+    .side_bar_user-box
+      .side_bar_user-box-name
+        %p user name
+      .side_bar_user-box-icon
+        = link_to "https://www.facebook.com/" do
+          %i.fa.fa-edit
+        = link_to "https://www.apple.com/" do
+          %i.fa.fa-cog
+    .side_bar_group
+      .side_bar_group-list
+        %h 子育て世代
+        %p 子供とディズニー行ったよ！
+      .side_bar_group-list
+        %h 格闘技大好き野郎
+        %p 天心強すぎ（笑）
+      .side_bar_group-list
+        %h ゲーマーのよりどころ
+        %p PUBG LIGHTはじめました〜
+      .side_bar_group-list
+        %h TECH::EXPERT 68期
+        %p 早くChatspace終わらせたーい！！！
+      .side_bar_group-list
+        %h アイドルの巣窟
+        %p アイドル界の五老星、嵐が休止
+  .main_chat
+    .main_chat_group
+      .main_chat_group-info
+        %h 子育て世代
+        %p Member: Masaru
+      .main_chat_group-edit
+        = link_to "https://twitter.com/", class: "edit-btn"do
+          %p Edit
+    .main_chat_message
+      .main_chat_message-list
+        %h1 Masaru 
+        %h2 2019/1/09(Thu) 14:30:01
+        %p 明日晴れるかな？
+      .main_chat_message-list
+        %h1 Masaru 
+        %h2 2019/1/09(Thu) 16:10:04
+        %p ちょっと休憩
+      .main_chat_message-list
+        %h1 Masaru 
+        %h2 2019/1/09(Thu) 20:30:30
+        %p もう一踏ん張り！
+    .main_chat_form
+      .main_chat_form-input
+        .main_chat_form-input-type
+          %input.input-type{name:"text", placeholder:"type a message", type:"text"}/ 
+          %label{class: "input-box__image"}
+            %i.far.fa-image
+            %input{type: "file"}
+        .main_chat_form-input-send
+          %input.input-send{name:"send", type:"submit"}/
