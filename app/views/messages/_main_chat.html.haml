@@ -1,39 +1,37 @@
-.body
-
-  .main_chat
-    .main_chat_group
-      .main_chat_group-info
-        %h 子育て世代
-        %p Member: Masaru
-      .main_chat_group-edit
-        = link_to "https://twitter.com/", class: "edit-btn"do
-          %p Edit
-    .main_chat_message
-      .main_chat_message-list
-        %h1 Masaru 
-        %h2 2019/1/09(Thu) 14:30:01
-        %p 明日晴れるかな？
-      .main_chat_message-list
-        %h1 Masaru 
-        %h2 2019/1/09(Thu) 16:10:04
-        %p ちょっと休憩
-      .main_chat_message-list
-        %h1 Masaru 
-        %h2 2019/1/09(Thu) 20:30:30
-        %p もう一踏ん張り！
-    .main_chat_form
-      .main_chat_form-input
-        .main_chat_form-input-type
-          = form_for [@group, @message] do |f|
-            = f.text_field :content, class: "main_chat_form-input-type-content", placeholder: "type a message"
-            .main_chat_form-input-type-image
-              = f.label :image, class: "main_chat_form-input-type-image-from" do
-                = icon("fas", "image", class: "icon")
-                = f.file_field :image, class: "hidden"
-            = f.submit "Send", class: "form__submit"
-          -# %input.input-type{name:"text", placeholder:"type a message", type:"text"}/ 
-          -# %label{class: "input-box__image"}
-          -#   %i.far.fa-image
-          -#   %input{type: "file"}
-        .main_chat_form-input-send
-          %input.input-send{name:"send", type:"submit"}/
+.main_chat
+  .main_chat_group
+    .main_chat_group-info
+      %h 子育て世代
+      %p Member: Masaru
+    .main_chat_group-edit
+      = link_to "https://twitter.com/", class: "edit-btn"do
+        %p Edit
+  .main_chat_message
+    .main_chat_message-list
+      %h1 Masaru 
+      %h2 2019/1/09(Thu) 14:30:01
+      %p 明日晴れるかな？
+    .main_chat_message-list
+      %h1 Masaru 
+      %h2 2019/1/09(Thu) 16:10:04
+      %p ちょっと休憩
+    .main_chat_message-list
+      %h1 Masaru 
+      %h2 2019/1/09(Thu) 20:30:30
+      %p もう一踏ん張り！
+  .main_chat_form
+    .main_chat_form-input
+      .main_chat_form-input-type
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: "main_chat_form-input-type-content", placeholder: "type a message"
+          .main_chat_form-input-type-image
+            = f.label :image, class: "main_chat_form-input-type-image-from" do
+              = icon("fas", "image", class: "icon")
+              = f.file_field :image, class: "hidden"
+          = f.submit "Send", class: "form__submit"
+        -# %input.input-type{name:"text", placeholder:"type a message", type:"text"}/ 
+        -# %label{class: "input-box__image"}
+        -#   %i.far.fa-image
+        -#   %input{type: "file"}
+      .main_chat_form-input-send
+        %input.input-send{name:"send", type:"submit"}/

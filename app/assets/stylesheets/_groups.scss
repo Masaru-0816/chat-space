@@ -22,8 +22,6 @@ li {
   font-size: 13px;
 }
 
-
-
 .chat-group-form {
   width: 980px;
   margin: 60px auto;
@@ -76,6 +74,10 @@ li {
     &--right {
       float: right;
       width: 70%;
+      line-height: 50px;
+      label {
+        padding: 0px 10px 0px 5px;
+      }
     }
   }
 }
