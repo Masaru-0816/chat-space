@@ -1,24 +1,16 @@
 .main_chat
   .main_chat_group
     .main_chat_group-info
-      %h 子育て世代
-      %p Member: Masaru
+      = @group.name
+    .main_chat_group-member
+      Member: 
+      - @group.users.each do |user|
+        = user.name
     .main_chat_group-edit
-      = link_to "https://twitter.com/", class: "edit-btn"do
+      = link_to edit_group_path(@group) do
         %p Edit
   .main_chat_message
-    .main_chat_message-list
-      %h1 Masaru 
-      %h2 2019/1/09(Thu) 14:30:01
-      %p 明日晴れるかな？
-    .main_chat_message-list
-      %h1 Masaru 
-      %h2 2019/1/09(Thu) 16:10:04
-      %p ちょっと休憩
-    .main_chat_message-list
-      %h1 Masaru 
-      %h2 2019/1/09(Thu) 20:30:30
-      %p もう一踏ん張り！
+    = render @messages
   .main_chat_form
     .main_chat_form-input
       = form_for [@group, @message] do |f|
