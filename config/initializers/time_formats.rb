@@ -1,0 +1,1 @@
+DateTime::DATE_FORMATS = "%Y/%m/%d %H:%M"
