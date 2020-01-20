@@ -44,11 +44,11 @@
         a {
           text-decoration: none;
           color: #fff;
-          &_name {
+          .group_name {
             font-size: 15px;
             padding-bottom: 5px;
           }
-          &_message {
+          .group_message {
             font-size: 11px;
           }
         }
@@ -106,12 +106,14 @@
       width: 100%;
       overflow: scroll;
       height: calc(100% - 190px);
+      padding: 35px 40px;
       .messages {
-        padding: 35px 40px;
         .message-list {
           height: 100%;
           width: 100%;
           display: flex;
+          justify-content: flex-start;
+          margin-bottom: 12px;
           .message-name {
             color: #333;
             height: 30px;
@@ -125,13 +127,13 @@
             font-size: 14px;
             padding-left: 10px;
           }
+        }
           .message-content {
             color: #333;
             height: 25px;
             line-height: 25px;
             font-size: 14px;
           }
-        }
       }
     }
     
