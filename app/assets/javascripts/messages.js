@@ -57,9 +57,6 @@ $(function(){
           $.each(messages, function(i, message) {
             insertHTML += buildHTML(message)
           });
-          // messages.forEach(function (message) {
-          //   insertHTML = buildHTML(message);
-          //   });
             $('.main_chat_message').append(insertHTML);
             $('.main_chat_message').animate({ scrollTop: $('.main_chat_message')[0].scrollHeight});
             $('form')[0].reset();
